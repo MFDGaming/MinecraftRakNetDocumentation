@@ -52,6 +52,14 @@ This is an example of what you can put in the data field.
 
 ```MCPE;Dedicated Server;440;1.17.0;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;```
 
+## Incompatible Protocol Version (0x19)
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| protocol version | unsigned char  | N/A             |
+| magic            | raknet magic   | N/A             |
+| server guid      | unsigned long  | big endian      |
+
 ## Open Connection Request 1 (0x05)
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
@@ -62,7 +70,9 @@ This is an example of what you can put in the data field.
 
 The actual mtu size is the size of the char array.
 The protocol version in the latest version of Minecraft
-Bedrock Edition is 10.
+Bedrock Edition is 10. If the protocol version of the
+client isnt the same as the server's the server responds
+with a Incompatible Protocol Version packet
 
 ## Open Connection Reply 1 (0x06)
 | Field name       | Field Type     | Field Endianess |

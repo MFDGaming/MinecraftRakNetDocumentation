@@ -36,4 +36,5 @@
 | magic            | raknet magic  | N/A             |
 | client guid      | unsigned long | big endian      |
 
-Older versions of Minecraft Packet edition don't have the client guid field.
+The Unconnected Ping Open Connections is only sent when there are open
+connections in the server.

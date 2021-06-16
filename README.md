@@ -61,3 +61,12 @@ This is an example of what you can put in the data field.
 | mtu size         | unsigned char[] | N/A             |
 
 The actual mtu size is the size of the unsigned char array
+
+## Open Connection Reply 1 (0x06)
+| Field name   | Field Type     | Field Endianess |
+|--------------|----------------|-----------------|
+| id           | unsigned char  | N/A             |
+| magic        | raknet magic   | N/A             |
+| server guid  | unsigned long  | big endian      |
+| use security | bool           | N/A             |
+| mtu size     | unsigned short | big endian      |

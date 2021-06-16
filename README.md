@@ -60,7 +60,9 @@ This is an example of what you can put in the data field.
 | protocol version | unsigned char  | N/A             |
 | mtu size         | char[]         | N/A             |
 
-The actual mtu size is the size of the char array
+The actual mtu size is the size of the char array.
+The protocol version in the latest version of Minecraft
+Bedrock Edition is 10.
 
 ## Open Connection Reply 1 (0x06)
 | Field name       | Field Type     | Field Endianess |

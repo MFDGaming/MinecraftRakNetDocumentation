@@ -18,7 +18,7 @@
 | raknet address | 7                 | The first byte is the address version (practically always 4). The next 4 bytes are the 4 parts of the IP address and they are decoded by subtracting the part's value from -1 and adding 255 to the result ((-1 - part) + 255). This applies for each byte one by one. The next 2 bytes are the port. They are a big endian unsigned short. |
 | bool           | 1                 | Any number that isn't 0 is True. 0 will always be false.                                                                                                                                                                                                                                                                                    |
 
-# Packets
+# Offline Packets
 
 ## Unconnected Ping (0x01)
 | Field name       | Field Type     | Field Endianess |
@@ -101,3 +101,28 @@ with a Incompatible Protocol Version packet
 | client address   | raknet address | N/A             |
 | mtu size         | unsigned short | big endian      |
 | use encryption   | bool           | N/A             |
+
+# Acknowledements
+
+## Records
+A record can either be a single sequence number or a
+range between 2 sequence numbers (if we have 1 and 8
+the numbers will be [1, 2, 3, 4, 5, 6, 7, 8]).
+### Record Packet Structure
+| condition        | Field name            | Field Type      | Field Endianess |
+|------------------|-----------------------|-----------------|-----------------|
+| N/A              | is single             | bool            | N/A             |
+| if is single     | sequence number       | unsigned triad  | little endian   |
+| if is not single | sequence number start | unsigned triad  | little endian   |
+| if is not single | sequence number end   | unsigned triad  | little endian   |
+
+## Packet Structure
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| record count     | unsigned short | big endian      |
+| records          | record[]       | N/A             |
+
+if the packet is used for sending the successfully arrived
+packets the packet id is 0xc0. if the packet is used for
+sending the not arrived packets the packet id is 0xa0.

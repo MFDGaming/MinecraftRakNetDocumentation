@@ -27,3 +27,13 @@
 | client timestamp | unsigned long | big endian      |
 | magic            | raknet magic  | N/A             |
 | client guid      | unsigned long | big endian      |
+
+## Unconnected Ping Open Connections (0x02)
+| Field name       | Field Type    | Field Endianess |
+|------------------|---------------|-----------------|
+| id               | unsigned byte | N/A             |
+| client timestamp | unsigned long | big endian      |
+| magic            | raknet magic  | N/A             |
+| client guid      | unsigned long | big endian      |
+
+Older versions of Minecraft Packet edition don't have the client guid field.

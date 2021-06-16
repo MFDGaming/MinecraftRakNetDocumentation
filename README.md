@@ -49,4 +49,5 @@ connections in the server.
 | data             | raknet string | N/A             |
 
 This is an example of what you can put in the data field.
-`MCPE;Dedicated Server;440;1.17.0;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;`
+
+```MCPE;Dedicated Server;440;1.17.0;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;```

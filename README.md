@@ -79,3 +79,13 @@ The actual mtu size is the size of the char array
 | server address   | raknet address | N/A             |
 | mtu size         | unsigned short | big endian      |
 | client guid      | unsigned long  | big endian      |
+
+## Open Connection Reply 2 (0x08)
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| magic            | raknet magic   | N/A             |
+| server guid      | unsigned long  | big endian      |
+| client address   | raknet address | N/A             |
+| mtu size         | unsigned short | big endian      |
+| use encryption   | bool           | N/A             |

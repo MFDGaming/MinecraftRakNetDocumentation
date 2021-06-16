@@ -21,52 +21,52 @@
 # Packets
 
 ## Unconnected Ping (0x01)
-| Field name       | Field Type    | Field Endianess |
-|------------------|---------------|-----------------|
-| id               | unsigned char | N/A             |
-| client timestamp | unsigned long | big endian      |
-| magic            | raknet magic  | N/A             |
-| client guid      | unsigned long | big endian      |
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| client timestamp | unsigned long  | big endian      |
+| magic            | raknet magic   | N/A             |
+| client guid      | unsigned long  | big endian      |
 
 ## Unconnected Ping Open Connections (0x02)
-| Field name       | Field Type    | Field Endianess |
-|------------------|---------------|-----------------|
-| id               | unsigned char | N/A             |
-| client timestamp | unsigned long | big endian      |
-| magic            | raknet magic  | N/A             |
-| client guid      | unsigned long | big endian      |
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| client timestamp | unsigned long  | big endian      |
+| magic            | raknet magic   | N/A             |
+| client guid      | unsigned long  | big endian      |
 
 The Unconnected Ping Open Connections is only sent when there are open
 connections in the server.
 
 ## Unconnected Pong (0x1c)
-| Field name       | Field Type    | Field Endianess |
-|------------------|---------------|-----------------|
-| id               | unsigned char | N/A             |
-| client timestamp | unsigned long | big endian      |
-| server guid      | unsigned long | big endian      |
-| magic            | raknet magic  | N/A             |
-| data             | raknet string | N/A             |
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| client timestamp | unsigned long  | big endian      |
+| server guid      | unsigned long  | big endian      |
+| magic            | raknet magic   | N/A             |
+| data             | raknet string  | N/A             |
 
 This is an example of what you can put in the data field.
 
 ```MCPE;Dedicated Server;440;1.17.0;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;```
 
 ## Open Connection Request 1 (0x05)
-| Field name       | Field Type      | Field Endianess |
-|------------------|-----------------|-----------------|
-| id               | unsigned char   | N/A             |
-| magic            | raknet magic    | N/A             |
-| protocol version | unsigned char   | N/A             |
-| mtu size         | unsigned char[] | N/A             |
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| magic            | raknet magic   | N/A             |
+| protocol version | unsigned char  | N/A             |
+| mtu size         | char[]         | N/A             |
 
-The actual mtu size is the size of the unsigned char array
+The actual mtu size is the size of the char array
 
 ## Open Connection Reply 1 (0x06)
-| Field name   | Field Type     | Field Endianess |
-|--------------|----------------|-----------------|
-| id           | unsigned char  | N/A             |
-| magic        | raknet magic   | N/A             |
-| server guid  | unsigned long  | big endian      |
-| use security | bool           | N/A             |
-| mtu size     | unsigned short | big endian      |
+| Field name       | Field Type     | Field Endianess |
+|------------------|----------------|-----------------|
+| id               | unsigned char  | N/A             |
+| magic            | raknet magic   | N/A             |
+| server guid      | unsigned long  | big endian      |
+| use security     | bool           | N/A             |
+| mtu size         | unsigned short | big endian      |

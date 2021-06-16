@@ -53,9 +53,11 @@ This is an example of what you can put in the data field.
 ```MCPE;Dedicated Server;440;1.17.0;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;```
 
 ## Open Connection Request 1 (0x05)
-| Field name            | Field Type      | Field Endianess |
-|-----------------------|-----------------|-----------------|
-| id                    | unsigned char   | N/A             |
-| magic                 | raknet magic    | N/A             |
-| protocol version      | unsigned char   | N/A             |
-| mtu size in pad chars | unsigned char[] | N/A             |
+| Field name       | Field Type      | Field Endianess |
+|------------------|-----------------|-----------------|
+| id               | unsigned char   | N/A             |
+| magic            | raknet magic    | N/A             |
+| protocol version | unsigned char   | N/A             |
+| mtu size         | unsigned char[] | N/A             |
+
+The actual mtu size is the size of the unsigned char array

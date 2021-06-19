@@ -71,7 +71,7 @@ This is an example of what you can put in the data field.
 The actual mtu size is the size of the char array.
 The protocol version in the latest version of Minecraft
 Bedrock Edition is 10. If the protocol version of the
-client isnt the same as the server's the server responds
+client is not the same as the server's the server responds
 with a Incompatible Protocol Version packet
 
 ## Open Connection Reply 1 (0x06)

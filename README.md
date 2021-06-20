@@ -132,7 +132,7 @@ sending the not arrived packets the packet id is 0xa0.
 | id   | name                              | is reliable | is sequenced | is ordered |
 |------|-----------------------------------|-------------|--------------|------------|
 | 0x00 | unreliable                        |             |              |            |  
-| 0x01 | unreliable sequenced              |             | - [ x ]            | x          |
+| 0x01 | unreliable sequenced              |             | - [x]            | x          |
 | 0x02 | reliable                          | x           |              |            |
 | 0x03 | reliable ordered                  | x           |              | x          |
 | 0x04 | reliable sequenced                | x           | x            | x          |

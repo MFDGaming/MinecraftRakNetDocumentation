@@ -144,14 +144,14 @@ sending the not arrived packets the packet id is 0xa0.
 
 ## Reliability Type Table
 
-| id   | name                              | is reliable        | is sequenced        | is ordered         |
-|------|-----------------------------------|--------------------|---------------------|--------------------|
-| 0x00 | unreliable                        |                    |                     |                    |  
-| 0x01 | unreliable sequenced              |                    | :heavy_check_mark:  | :heavy_check_mark: |
-| 0x02 | reliable                          | :heavy_check_mark: |                     |                    |
-| 0x03 | reliable ordered                  | :heavy_check_mark: |                     | :heavy_check_mark: |
-| 0x04 | reliable sequenced                | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
-| 0x05 | unreliable with ACK receipt       |                    |                     |                    | 
-| 0x06 | reliable with ACK receipt         | :heavy_check_mark: |                     |                    |
-| 0x07 | reliable ordered with ACK receipt | :heavy_check_mark: |                     | :heavy_check_mark: |
+| id   | name                              | is reliable | is sequenced | is ordered |
+|------|-----------------------------------|-------------|--------------|------------|
+| 0x00 | unreliable                        |             |              |            |  
+| 0x01 | unreliable sequenced              |             | ✔            | ✔          |
+| 0x02 | reliable                          | ✔           |              |            |
+| 0x03 | reliable ordered                  | ✔           |              | ✔          |
+| 0x04 | reliable sequenced                | ✔           | ✔            | ✔          |
+| 0x05 | unreliable with ACK receipt       |             |              |            | 
+| 0x06 | reliable with ACK receipt         | ✔           |              |            |
+| 0x07 | reliable ordered with ACK receipt | ✔           |              | ✔          |
 

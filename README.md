@@ -129,14 +129,14 @@ sending the not arrived packets the packet id is 0xa0.
 
 # Frame Sets
 ## Reliability Type Table
-| id   | name                              | is reliable | is sequenced | is ordered |
-|------|-----------------------------------|-------------|--------------|------------|
-| 0x00 | unreliable                        |             |              |            |  
-| 0x01 | unreliable sequenced              |             | :heavy_check_mark:           | x          |
-| 0x02 | reliable                          | x           |              |            |
-| 0x03 | reliable ordered                  | x           |              | x          |
-| 0x04 | reliable sequenced                | x           | x            | x          |
-| 0x05 | unreliable with ACK receipt       |             |              |            | 
-| 0x06 | reliable with ACK receipt         | x           |              |            |
-| 0x07 | reliable ordered with ACK receipt | x           |              | x          |
+| id   | name                              | is reliable        | is sequenced        | is ordered         |
+|------|-----------------------------------|--------------------|---------------------|--------------------|
+| 0x00 | unreliable                        |                    |                     |                    |  
+| 0x01 | unreliable sequenced              |                    | :heavy_check_mark:  | :heavy_check_mark: |
+| 0x02 | reliable                          | :heavy_check_mark: |                     |                    |
+| 0x03 | reliable ordered                  | :heavy_check_mark: |                     | :heavy_check_mark: |
+| 0x04 | reliable sequenced                | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
+| 0x05 | unreliable with ACK receipt       |                    |                     |                    | 
+| 0x06 | reliable with ACK receipt         | :heavy_check_mark: |                     |                    |
+| 0x07 | reliable ordered with ACK receipt | :heavy_check_mark: |                     | :heavy_check_mark: |
 

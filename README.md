@@ -1,4 +1,5 @@
 # Data Types
+
 | Type           | Length            | Notes                                                                                                                                                                                                                                                                                                                                       |
 |----------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | unsigned char  | 1                 | A integer that ranges from 0 to 255                                                                                                                                                                                                                                                                                                         |
@@ -21,6 +22,7 @@
 # Offline Packets
 
 ## Unconnected Ping (0x01)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -29,6 +31,7 @@
 | client guid      | unsigned long  | big endian      |
 
 ## Unconnected Ping Open Connections (0x02)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -40,6 +43,7 @@ The Unconnected Ping Open Connections is only sent when there are open
 connections in the server.
 
 ## Unconnected Pong (0x1c)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -53,6 +57,7 @@ This is an example of what you can put in the data field.
 ```MCPE;Dedicated Server;440;1.17.0;0;10;13253860892328930865;Bedrock level;Survival;1;19132;19133;```
 
 ## Incompatible Protocol Version (0x19)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -61,6 +66,7 @@ This is an example of what you can put in the data field.
 | server guid      | unsigned long  | big endian      |
 
 ## Open Connection Request 1 (0x05)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -75,6 +81,7 @@ client is not the same as the server's the server responds
 with a Incompatible Protocol Version packet
 
 ## Open Connection Reply 1 (0x06)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -84,6 +91,7 @@ with a Incompatible Protocol Version packet
 | mtu size         | unsigned short | big endian      |
 
 ## Open Connection Request 1 (0x07)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -93,6 +101,7 @@ with a Incompatible Protocol Version packet
 | client guid      | unsigned long  | big endian      |
 
 ## Open Connection Reply 2 (0x08)
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -105,10 +114,13 @@ with a Incompatible Protocol Version packet
 # Acknowledements
 
 ## Records
+
 A record can either be a single sequence number or a
 range between 2 sequence numbers (if we have 1 and 8
 the numbers will be [1, 2, 3, 4, 5, 6, 7, 8]).
+
 ### Record Packet Structure
+
 | condition        | Field name            | Field Type      | Field Endianess |
 |------------------|-----------------------|-----------------|-----------------|
 | N/A              | is single             | bool            | N/A             |
@@ -117,6 +129,7 @@ the numbers will be [1, 2, 3, 4, 5, 6, 7, 8]).
 | if is not single | sequence number end   | unsigned triad  | little endian   |
 
 ## Packet Structure
+
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|
 | id               | unsigned char  | N/A             |
@@ -128,7 +141,9 @@ packets the packet id is 0xc0. if the packet is used for
 sending the not arrived packets the packet id is 0xa0.
 
 # Frame Sets
+
 ## Reliability Type Table
+
 | id   | name                              | is reliable        | is sequenced        | is ordered         |
 |------|-----------------------------------|--------------------|---------------------|--------------------|
 | 0x00 | unreliable                        |                    |                     |                    |  

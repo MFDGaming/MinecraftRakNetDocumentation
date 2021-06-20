@@ -126,3 +126,17 @@ the numbers will be [1, 2, 3, 4, 5, 6, 7, 8]).
 if the packet is used for sending the successfully arrived
 packets the packet id is 0xc0. if the packet is used for
 sending the not arrived packets the packet id is 0xa0.
+
+# Frame Sets
+## Reliability Type Table
+| id   | name                              | is reliable | is sequenced | is ordered |
+|------|-----------------------------------|-------------|--------------|------------|
+| 0x00 | unreliable                        |       
+| 0x01 | unreliable sequenced              |
+| 0x02 | reliable                          |
+| 0x03 | reliable ordered                  |
+| 0x04 | reliable sequenced                |
+| 0x05 | unreliable with ACK receipt       |
+| 0x06 | reliable with ACK receipt         |
+| 0x07 | reliable ordered with ACK receipt |
+

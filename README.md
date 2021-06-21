@@ -123,7 +123,7 @@ the numbers will be [1, 2, 3, 4, 5, 6, 7, 8]).
 
 ### Record Packet Structure
 
-| condition        | Field name            | Field Type      | Field Endianess |
+| Condition        | Field name            | Field Type      | Field Endianess |
 |------------------|-----------------------|-----------------|-----------------|
 | N/A              | is single             | bool            | N/A             |
 | if is single     | sequence number       | unsigned triad  | little endian   |

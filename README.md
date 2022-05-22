@@ -92,7 +92,7 @@ with a Incompatible Protocol Version packet
 | use security     | bool           | N/A             |
 | mtu size         | unsigned short | big endian      |
 
-## Open Connection Request 1 (0x07)
+## Open Connection Request 2 (0x07)
 
 | Field name       | Field Type     | Field Endianess |
 |------------------|----------------|-----------------|

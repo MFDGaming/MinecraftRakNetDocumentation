@@ -125,25 +125,25 @@ with a Incompatible Protocol Version packet
 
 ## Connection Request Accepted (0x10)
 
-| Field name        | Field Type       | Field Endianess |
-|-------------------|------------------|-----------------|
-| id                | unsigned char    | N/A             |
-| client address    | raknet address   | N/A             |
-| system index      | unsigned short   | big endian      |
-| system addresses  | raknet address[] | N/A             | 
-| request timestamp | unsigned long    | big endian      |
-| replay timestamp  | unsigned long    | big endian      |
+| Field name        | Field Type         | Field Endianess |
+|-------------------|--------------------|-----------------|
+| id                | unsigned char      | N/A             |
+| client address    | raknet address     | N/A             |
+| system index      | unsigned short     | big endian      |
+| system addresses  | raknet address[20] | N/A             | 
+| request timestamp | unsigned long      | big endian      |
+| replay timestamp  | unsigned long      | big endian      |
 
 ## New incoming Connection (0x13)
 
-| Field name        | Field Type       | Field Endianess |
-|-------------------|------------------|-----------------|
-| id                | unsigned char    | N/A             |
-| server address    | raknet address   | N/A             |
-| system index      | unsigned short   | big endian      |
-| system addresses  | raknet address[] | N/A             |
-| request timestamp | unsigned long    | big endian      |
-| replay timestamp  | unsigned long    | big endian      |
+| Field name        | Field Type         | Field Endianess |
+|-------------------|--------------------|-----------------|
+| id                | unsigned char      | N/A             |
+| server address    | raknet address     | N/A             |
+| system index      | unsigned short     | big endian      |
+| system addresses  | raknet address[20] | N/A             |
+| request timestamp | unsigned long      | big endian      |
+| replay timestamp  | unsigned long      | big endian      |
 
 ## Connected Ping (0x00)
 

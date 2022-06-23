@@ -115,7 +115,7 @@ with a Incompatible Protocol Version packet
 
 # Connected Packets
 
-# Connection Request (0x09)
+## Connection Request (0x09)
 
 | Field name        | Field Type     | Field Endianess |
 |-------------------|----------------|-----------------|
@@ -123,7 +123,7 @@ with a Incompatible Protocol Version packet
 | client guid       | unsigned long  | big endian      |
 | request timestamp | unsigned long  | big endian      |
 
-# Connection Request Accepted (0x10)
+## Connection Request Accepted (0x10)
 
 | Field name        | Field Type     | Field Endianess |
 |-------------------|----------------|-----------------|
@@ -134,7 +134,7 @@ with a Incompatible Protocol Version packet
 | request timestamp | unsigned long  | big endian      |
 | replay timestamp  | unsigned long  | big endian      |
 
-# New incoming Connection (0x13)
+## New incoming Connection (0x13)
 
 | Field name        | Field Type     | Field Endianess |
 |-------------------|----------------|-----------------|
@@ -145,14 +145,14 @@ with a Incompatible Protocol Version packet
 | request timestamp | unsigned long  | big endian      |
 | replay timestamp  | unsigned long  | big endian      |
 
-# Connected Ping (0x00)
+## Connected Ping (0x00)
 
 | Field name        | Field Type     | Field Endianess |
 |-------------------|----------------|-----------------|
 | id                | unsigned char  | N/A             |
 | client timestamp  | unsigned long  | big endian      |
 
-# Connected Pong (0x03)
+## Connected Pong (0x03)
 
 | Field name        | Field Type     | Field Endianess |
 |-------------------|----------------|-----------------|
@@ -160,7 +160,7 @@ with a Incompatible Protocol Version packet
 | client timestamp  | unsigned long  | big endian      |
 | request timestamp | unsigned long  | big endian      |
 
-# Disconnection Notification (0x15)
+## Disconnection Notification (0x15)
 
 | Field name        | Field Type     | Field Endianess |
 |-------------------|----------------|-----------------|

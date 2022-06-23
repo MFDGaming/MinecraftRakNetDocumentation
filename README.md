@@ -113,7 +113,60 @@ with a Incompatible Protocol Version packet
 | mtu size         | unsigned short | big endian      |
 | use encryption   | bool           | N/A             |
 
-# Acknowledements
+# Connected Packets
+
+## Connection Request (0x09)
+
+| Field name        | Field Type     | Field Endianess |
+|-------------------|----------------|-----------------|
+| id                | unsigned char  | N/A             |
+| client guid       | unsigned long  | big endian      |
+| request timestamp | unsigned long  | big endian      |
+
+## Connection Request Accepted (0x10)
+
+| Field name        | Field Type         | Field Endianess |
+|-------------------|--------------------|-----------------|
+| id                | unsigned char      | N/A             |
+| client address    | raknet address     | N/A             |
+| system index      | unsigned short     | big endian      |
+| system addresses  | raknet address[20] | N/A             | 
+| request timestamp | unsigned long      | big endian      |
+| replay timestamp  | unsigned long      | big endian      |
+
+## New incoming Connection (0x13)
+
+| Field name        | Field Type         | Field Endianess |
+|-------------------|--------------------|-----------------|
+| id                | unsigned char      | N/A             |
+| server address    | raknet address     | N/A             |
+| system index      | unsigned short     | big endian      |
+| system addresses  | raknet address[20] | N/A             |
+| request timestamp | unsigned long      | big endian      |
+| replay timestamp  | unsigned long      | big endian      |
+
+## Connected Ping (0x00)
+
+| Field name        | Field Type     | Field Endianess |
+|-------------------|----------------|-----------------|
+| id                | unsigned char  | N/A             |
+| client timestamp  | unsigned long  | big endian      |
+
+## Connected Pong (0x03)
+
+| Field name        | Field Type     | Field Endianess |
+|-------------------|----------------|-----------------|
+| id                | unsigned char  | N/A             |
+| client timestamp  | unsigned long  | big endian      |
+| request timestamp | unsigned long  | big endian      |
+
+## Disconnection Notification (0x15)
+
+| Field name        | Field Type     | Field Endianess |
+|-------------------|----------------|-----------------|
+| id                | unsigned char  | N/A             |
+
+# Acknowledgements
 
 ## Records
 
